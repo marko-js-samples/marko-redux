@@ -30,3 +30,12 @@ class {
     <counter(store.getState()) ... />
 </div>
 ```
+
+In the above example, the imported store module exports a Redux store created using the following code:
+
+```js
+var redux = require('redux');
+var counter = require('./reducers');
+
+module.exports = redux.createStore(counter);
+```
