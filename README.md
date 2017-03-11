@@ -21,7 +21,14 @@ import store from '../store';
 class {
     onMount() {
         store.subscribe(() => {
+            // Force this UI component to rerender:
             this.forceUpdate();
+
+            // The UI component will be rerendered using the new
+            // state returned by `store.getState()`
+            //
+            // The following is another option to force an update:
+            // this.input = store.getState();
         });
     }
 }
