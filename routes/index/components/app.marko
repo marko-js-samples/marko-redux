@@ -1,0 +1,20 @@
+import counterComponent from './counter';
+import store from '../store';
+
+class {
+    onMount() {
+        store.subscribe(() => {
+            this.forceUpdate();
+        });
+    }
+
+    dispatch(type) {
+        store.dispatch({ type: type });
+    }
+}
+
+<div>
+    <counter(store.getState())
+        on-increment('dispatch', 'INCREMENT')
+        on-decrement('dispatch', 'DECREMENT') />
+</div>
