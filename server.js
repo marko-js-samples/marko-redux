@@ -31,6 +31,7 @@ app.use(require('lasso/middleware').serveStatic());
 
 // Map the "/" route to the home page
 app.get('/', require('./routes/index/route'));
+app.get('/server-side-redux/:value', require('./routes/server-side-redux/route'));
 
 app.listen(port, function(err) {
     if (err) {
